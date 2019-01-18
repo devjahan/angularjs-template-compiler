@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "description": "Template rendring",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": "https://github.com/devjahan/angularjs-template-compiler",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.6",
