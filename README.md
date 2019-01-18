@@ -22,6 +22,11 @@ your project.
 *Note copying the AngularJS files from `node_modules` to `app/dist/lib` makes it easier to serve the
 files by a web server.*
 
+### Compile HAML, Coffee and scss 
+```
+gulp
+```
+Above command will compile the templates and generate new templates under the `app/dist/`directory
 ### Run the Application
 
 We have preconfigured the project with a simple development web server. The simplest way to start
