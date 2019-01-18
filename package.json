@@ -1,0 +1,47 @@
+{
+  "name": "Sapling",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Template rendring",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-loader": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "grunt-haml": "^0.9.0",
+    "gulp-coffee": "^3.0.3",
+    "gulp-haml": "^1.0.1",
+    "gulp-ruby-haml": "0.0.9",
+    "haml": "^0.4.3",
+    "hamljs": "^0.6.2",
+    "html5-boilerplate": "0.0.1",
+    "natives": "^1.1.6"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "gulp": "^4.0.0",
+    "gulp-angular-templatecache": "^2.2.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-install": "^1.1.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.11.0",
+    "protractor": "^5.4.1"
+  },
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "update-deps": "npm update",
+    "postupdate-deps": "npm run copy-libs",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,html5-boilerplate/dist}/**/*\" app/dist/lib -C",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app/dist",
+    "pretest": "npm install",
+    "preupdate-webdriver": "npm install",
+    "update-index-async": "node --eval \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/lib/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=lib/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  }
+}

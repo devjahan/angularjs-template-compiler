@@ -1,0 +1,25 @@
+%html.no-js{:lang => "en", "ng-app" => "myApp"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %title Render Templates
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "app.css", :rel => "stylesheet"}/
+  %body
+    %ul.menu
+      %li
+        %a{:href => "#!/view1"} view1
+      %li
+        %a{:href => "#!/view2"} view2
+    %div{"ng-view" => ""}
+    %div
+      AngularJS seed app: v
+      %span{"app-version" => ""}
+    
+    %script{:src => "lib/angular/angular.js"}
+    %script{:src => "lib/angular-route/angular-route.js"}
+    %script{:src => "app.js"}
+    %script{:src => "view1/view1.js"}
+    %script{:src => "view2/view2.js"}
